@@ -1,0 +1,33 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.alacritty.yml:
+    ~/.bash:
+    ~/.bash_profile: bash/.bash_profile
+    ~/.bashrc: bash/.bashrc
+    ~/.bash_it:
+    ~/.curlrc:
+    ~/.dir_colors: dir_colors.nord
+    ~/.editorconfig:
+    ~/.emacs.d:
+    # ~/.gitconfig:
+    # ~/.gitignore:
+    ~/.inputrc:
+    ~/.spacemacs:
+    ~/.tmux:
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux.conf.local:
+    ~/.wgetrc:
+
+- create:
+  - ~/Projects
+
+- shell:
+  - git submodule sync --recursive
+  - git submodule update --init --recursive
+  

@@ -1,0 +1,28 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "bash_it"]
+	path = bash_it
+	url = https://github.com/Bash-it/bash-it.git
+	ignore = dirty
+[submodule "bash_it/test_lib/bats-core"]
+	path = bash_it/test_lib/bats-core
+	url = https://github.com/bats-core/bats-core
+	ignore = dirty
+[submodule "bash_it/test_lib/bats-support"]
+	path = bash_it/test_lib/bats-support
+	url = https://github.com/ztombol/bats-support
+	ignore = dirty
+[submodule "bash_it/test_lib/bats-assert"]
+	path = bash_it/test_lib/bats-assert
+	url = https://github.com/ztombol/bats-assert
+	ignore = dirty
+[submodule "bash_it/test_lib/bats-file"]
+	path = bash_it/test_lib/bats-file
+	url = https://github.com/ztombol/bats-file
+	ignore = dirty
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/felipepina/.tmux.git
+	ignore = dirty
