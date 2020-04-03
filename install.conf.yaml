@@ -23,6 +23,9 @@
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.tmux.conf.local:
     ~/.wgetrc:
+    ~/.local/bin/cb:
+      create: true
+      path: bin/cb
 
 - create:
   - ~/Projects
@@ -30,4 +33,3 @@
 - shell:
   - git submodule sync --recursive
   - git submodule update --init --recursive
-  

@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 
-if [ $(uname) = Darwin ]; then
+if [ "$(uname)" = Darwin ]; then
 	./brew.sh
 	# ./macos.sh
+fi
+if [ "$(uname)" = Linux ]; then
+	./debian.sh
+	#	./snap.sh
 fi
 
 # Install/update the dotfiles
 ./install.sh
+
+# Install Tmux Plugin Manager (https://github.com/tmux-plugins/tpm)
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install SDKMAN!
 ./sdkman.sh

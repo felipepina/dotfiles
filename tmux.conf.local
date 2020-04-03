@@ -331,11 +331,10 @@ set -g @tpm_plugins '          \
   tmux-plugins/tmux-resurrect  \
   tmux-plugins/tmux-continuum  \
   tmux-plugins/tmux-sensible   \
-  tmux-plugins/tmux-copycat     \
+  tmux-plugins/tmux-copycat    \
 '
 # jbnicolai/tmux-fpp           \
 # arcticicestudio/nord-tmux    \
 
-# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf) (https://github.com/tmux-plugins/tpm)
 run '~/.tmux/plugins/tpm/tpm'
- 
