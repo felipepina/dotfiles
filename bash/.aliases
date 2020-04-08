@@ -51,7 +51,7 @@ alias sudo='sudo '
 # Get week number
 alias week='date +%V'
 
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+# Update apt, snap and flatpak
 alias update='sudo apt update && sudo apt upgrade; sudo snap refresh; flatpak update'
 
 # IP addresses
