@@ -53,6 +53,8 @@ sudo apt install -y pigz
 sudo apt install -y pv
 # Pygments dependencies
 sudo apt install -y python3-pip python3-venv
+# A DBus daemon to configure input devices, mainly gaming mice
+sudo apt install -y ratbagd
 # Rename multiple files (http://plasmasturm.org/code/rename)
 sudo apt install -y rename
 # Recursively searches directories for a regex pattern (https://github.com/BurntSushi/ripgrep)
