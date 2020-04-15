@@ -34,35 +34,36 @@ fi;
 ## Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 #[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
+# Load Bash It (https://github.com/Bash-it/bash-it)
+source "$BASH_IT"/bash_it.sh
+
 # Tracks most-used directories to make cd smarter
 # z (https://github.com/rupa/z)
 # fz (https://github.com/changyuheng/fz)
 test -r "${HOME}/dotfiles/bin/z.sh" && source "${HOME}/dotfiles/bin/z.sh"
 test -r "${HOME}/dotfiles/bin/zfz.sh" && source "${HOME}/dotfiles/bin/zfz.sh"
 
-
 # A leak-proof tee to the clipboard (https://gist.github.com/RichardBronosky/56d8f614fab2bacdd8b048fb58d0c0c7)
 # test -r "${HOME}/dotfiles/bin/cb.sh" && source "${HOME}/dotfiles/bin/cb.sh"
 
 # Setup fzf (https://github.com/junegunn/fzf)
 if which fzf > /dev/null; then
-
-	# Auto-completion
-	#[[ $- == *i* ]] && source "$(brew --prefix)/opt/fzf/shell/completion.bash" 2> /dev/null
-
 	# Key bindings
 	source /usr/share/doc/fzf/examples/key-bindings.bash
+
+	# Bash completion
+	[[ $- == *i* ]] && source /usr/share/bash-completion/completions/fzf 2> /dev/null
 
 	# Change default command to ripgrep
 	# export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 	# export FZF_CTRL_T_COMMAND='rg --files --no-ignore-vcs --hidden'
 
-	# Change default command to fd
-	export FZF_DEFAULT_COMMAND='fd --type f -H -I'
-	export FZF_CTRL_T_COMMAND='fd --type f -H -I'
-	export FZF_ALT_C_COMMAND='fd --type d -H -I'
+	# Change default command to fd (fdfind in Debian)
+	export FZF_DEFAULT_COMMAND='fdfind --type f -H -I'
+	export FZF_CTRL_T_COMMAND='fdfind --type f -H -I'
+	export FZF_ALT_C_COMMAND='fdfind --type d -H -I'
 
-	# Enable preview for the CTRL-C using pygments as syntax highlighter
+	# Enable preview for the CTRL-T using pygments as syntax highlighter
 	export FZF_CTRL_T_OPTS="--preview '(pygmentize -f 256 -O style="$BASH_IT_CCAT_STYLE" -g {} || tree -C {}) 2> /dev/null | head -200'"
 fi;
 
@@ -71,9 +72,6 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 # luaver (https://github.com/DhavalKapil/luaver)
 [ -s ${HOME}/.luaver/luaver ] && . ${HOME}/.luaver/luaver
-
-# Load Bash It (https://github.com/Bash-it/bash-it)
-source "$BASH_IT"/bash_it.sh
 
 # #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 # export SDKMAN_DIR="$HOME/.sdkman"
