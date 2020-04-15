@@ -22,4 +22,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash-it enable completion bash-it sdkman tmux ssh system
 
 # Add bash-it plugins
-bash-it enable plugin base docker-compose docker edit-mode-emacs extract gradle history less-pretty-cat man sdkman visual-studio-code fzf
+bash-it enable plugin base docker-compose docker edit-mode-emacs extract gradle history less-pretty-cat man sdkman fzf
