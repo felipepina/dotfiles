@@ -51,8 +51,16 @@ if which fzf > /dev/null; then
 	# Key bindings
 	source /usr/share/doc/fzf/examples/key-bindings.bash
 
-	# Bash completion
+	# Bash fuzzy completion
 	[[ $- == *i* ]] && source /usr/share/bash-completion/completions/fzf 2> /dev/null
+
+	# Setup fuzzy completion for more commands
+	complete -F _fzf_path_completion -o default -o bashdefault ag
+	complete -F _fzf_path_completion -o default -o bashdefault fd
+	complete -F _fzf_path_completion -o default -o bashdefault rg
+	complete -F _fzf_path_completion -o default -o bashdefault ccat
+	complete -F _fzf_path_completion -o default -o bashdefault cless
+	complete -F _fzf_dir_completion -o default -o bashdefault tree
 
 	# Change default command to ripgrep
 	# export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
@@ -65,6 +73,10 @@ if which fzf > /dev/null; then
 
 	# Enable preview for the CTRL-T using pygments as syntax highlighter
 	export FZF_CTRL_T_OPTS="--preview '(pygmentize -f 256 -O style="$BASH_IT_CCAT_STYLE" -g {} || tree -C {}) 2> /dev/null | head -200'"
+
+	# Add fzf-obc bash completion
+	#source ${HOME}/.config/fzf-obc/bin/fzf-obc.bash
+
 fi;
 
 # Nord dircolors (https://github.com/arcticicestudio/nord-dircolors)
