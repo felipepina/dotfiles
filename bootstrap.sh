@@ -19,7 +19,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ./sdkman.sh
 
 # Add bash-it completion
-bash-it enable completion bash-it sdkman tmux ssh system
+bash-it enable completion bash-it docker-compose git gradle kubectl maven sdkman ssh system tmux
 
 # Add bash-it plugins
-bash-it enable plugin base docker-compose docker edit-mode-emacs extract gradle history less-pretty-cat man sdkman fzf
+bash-it enable plugin base docker docker-compose edit-mode-emacs extract fzf git gradle history java less-pretty-cat man sdkman ssh
+
+# Add bash-it aliases
+bash-it enable alias ag apt curl docker-compose docker emacs general git kubectl maven systemd tmux
