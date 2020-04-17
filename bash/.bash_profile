@@ -74,9 +74,12 @@ if which fzf > /dev/null; then
 	# Enable preview for the CTRL-T using pygments as syntax highlighter
 	export FZF_CTRL_T_OPTS="--preview '(pygmentize -f 256 -O style="$BASH_IT_CCAT_STYLE" -g {} || tree -C {}) 2> /dev/null | head -200'"
 
-	# Add fzf-obc bash completion
+	# Add fzf-obc bash completion (https://github.com/rockandska/fzf-obc)
 	#source ${HOME}/.config/fzf-obc/bin/fzf-obc.bash
 
+	# Configure Bash tab completion to use fzf (https://github.com/lincheney/fzf-tab-completion)
+	#source ${HOME}/.config/fzf-tab-completion/bash/fzf-bash-completion.sh
+	#bind -x '"\t": fzf_bash_completion'
 fi;
 
 # Nord dircolors (https://github.com/arcticicestudio/nord-dircolors)
