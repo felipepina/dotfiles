@@ -24,6 +24,9 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
+# Download torrent with aria2c without seeding it
+alias aria2c-noseed='aria2c --seed-time=0'
+
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "${method}"="lwp-request -m '${method}'"
@@ -37,3 +40,4 @@ test -f "$(command -v reset)" || alias reset="tput reset"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+#alias path='echo $PATH | tr ":" "\n" | nl'
