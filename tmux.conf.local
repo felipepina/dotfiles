@@ -369,8 +369,8 @@ bind-key -n "M-S-Right" run-shell 'old=`tmux display -p "#{pane_index}"`; tmux s
 bind-key -n M-x confirm-before "kill-pane"
 
 # Middle click to paste from the clipboard
-unbind-key MouseDown2Pane
-bind-key -n MouseDown2Pane run "tmux set-buffer -- \"$(xclip -o -sel clipboard);\"; tmux paste-buffer -p"
+#unbind-key MouseDown2Pane
+#bind-key -n MouseDown2Pane run "tmux set-buffer -- \"$(xclip -o -sel clipboard);\"; tmux paste-buffer -p"
 
 # move status line to top
 # set -g status-position top
