@@ -647,9 +647,10 @@ key_bindings:
 
   - { key: Paste,                    action: Paste                            }
   - { key: Copy,                     action: Copy                             }
-#  - { key: L,         mods: Control, action: ClearLogNotice                   }
+# - { key: L,         mods: Control, action: ClearLogNotice                   }
   - { key: L,         mods: Control, chars: "\x0c"                            }
-#  - { key: L,         mods: Control, command: { program: "reset", args: [] }}
+# - { key: K,         mods: Control|Alt, action: ClearHistory                 }
+  - { key: E,         mods: Control|Alt, command: { program: "emacsclient", args: ["-c", "."] }}
   - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
   - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
   - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
