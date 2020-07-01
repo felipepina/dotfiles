@@ -282,7 +282,10 @@ tmux_conf_copy_to_os_clipboard=false
 set -g @continuum-save-interval '10'
 set -g @continuum-restore 'on'
 set -g @continuum-boot 'on'
-set -g @continuum-boot-options 'iterm,fullscreen'
+#set -g @continuum-boot-options 'iterm,fullscreen'
+
+# tmux-resurect
+set -g @resurrect-hook-pre-restore-all 'export DISPLAY=:1'
 
 # increase history size
 #set -g history-limit 10000
