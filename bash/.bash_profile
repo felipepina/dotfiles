@@ -53,6 +53,7 @@ if which fzf > /dev/null; then
 
 	# Bash fuzzy completion
 	[[ $- == *i* ]] && source /usr/share/bash-completion/completions/fzf 2> /dev/null
+	[[ $- == *i* ]] && source /usr/share/doc/fzf/examples/completion.bash 2> /dev/null
 
 	# Setup fuzzy completion for more commands
 	complete -F _fzf_path_completion -o default -o bashdefault ag
