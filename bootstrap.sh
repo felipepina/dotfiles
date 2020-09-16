@@ -6,7 +6,7 @@ if [ "$(uname)" = Darwin ]; then
 fi
 if [ "$(uname)" = Linux ]; then
 	./debian.sh
-	#	./snap.sh
+	# ./snap.sh
 fi
 
 # Install/update the dotfiles
