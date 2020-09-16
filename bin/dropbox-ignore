@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# https://help.dropbox.com/files-folders/restore-delete/ignored-files
+
+fullpath=$(realpath "${1}")
+echo "${fullpath} is now ignored by Dropbox sync"
+attr -s com.dropbox.ignored -V 1 ${fullpath}
