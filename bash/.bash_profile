@@ -88,6 +88,10 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 # luaver (https://github.com/DhavalKapil/luaver)
 [ -s ${HOME}/.luaver/luaver ] && . ${HOME}/.luaver/luaver
 
+if which starship > /dev/null; then
+	eval "$(starship init bash)"
+fi;
+
 # #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 # export SDKMAN_DIR="$HOME/.sdkman"
 # [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
