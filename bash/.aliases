@@ -41,3 +41,6 @@ test -f "$(command -v reset)" || alias reset="tput reset"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 #alias path='echo $PATH | tr ":" "\n" | nl'
+
+# 
+alias disable-ertm="echo 'Y' | sudo tee /sys/module/bluetooth/parameters/disable_ertm"
