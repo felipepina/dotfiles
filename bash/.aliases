@@ -25,6 +25,9 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
+alias dkbk="DOCKER_BUILDKIT=1 docker build"
+alias dkpss="docker ps --format 'table {{ .ID }}\t{{.Image}}\t{{ .Names }}'"
+
 # Download torrent with aria2c without seeding it
 alias aria2c-noseed='aria2c --seed-time=0'
 
@@ -43,5 +46,5 @@ test -f "$(command -v reset)" || alias reset="tput reset"
 alias path='echo -e ${PATH//:/\\n}'
 #alias path='echo $PATH | tr ":" "\n" | nl'
 
-# 
+#
 alias disable-ertm="echo 'Y' | sudo tee /sys/module/bluetooth/parameters/disable_ertm"
