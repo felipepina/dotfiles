@@ -6,6 +6,7 @@ alias dl="cd ${HOME}/Downloads"
 alias dt="cd ${HOME}/Desktop"
 alias p="cd ${HOME}/Projects"
 alias g="git"
+alias glall="git log --all --decorate --oneline --graph"
 alias ec="emacsclient -c"
 
 # Alias Debian fd exec name fdfind to fd
