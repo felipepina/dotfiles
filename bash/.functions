@@ -171,17 +171,21 @@ function tre() {
 }
 
 function spell() {
-    echo "${1}" | aspell -a list -l "${2}"
+	echo "${1}" | aspell -a list -l "${2}"
 }
 
 function spellbr() {
-    spell "${1}" "pt_BR"
+	spell "${1}" "pt_BR"
 }
 
 function spellus() {
-    spell "${1}" "en_US"
+	spell "${1}" "en_US"
 }
 
 function conj() {
-    open https://www.conjugacao.com.br/verbo-$1/
+	open https://www.conjugacao.com.br/verbo-$1/
+}
+
+function git-ignore() {
+	curl -sL https://www.toptal.com/developers/gitignore/api/$@
 }
