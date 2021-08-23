@@ -1,4 +1,11 @@
-# # Add VS Code CLI
-# if [ -d "/Applications/Visual Studio Code.app" ]; then
-#     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-# fi
+# Add `~/bin` to the `$PATH`
+local_bin="$HOME/.local/bin"
+if [ -n "${PATH##*$local_bin*}" ] ;then
+   export PATH="$local_bin:$PATH";
+fi
+
+# Add Cargo's bin directory to PATH
+cargo_bin="$HOME/.cargo/bin"
+if [ -n "${PATH##*$cargo_bin*}" ] ;then
+   export PATH="$cargo_bin:$PATH";
+fi
