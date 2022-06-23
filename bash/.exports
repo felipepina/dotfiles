@@ -23,6 +23,9 @@ export HISTCONTROL='ignoreboth';
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 
+# WA to setup locale in Nix packages (https://github.com/NixOS/nix/issues/599#ref-commit-cf04994)
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 

@@ -9,6 +9,9 @@ if [ "$(uname)" = Linux ]; then
 	# ./snap.sh
 fi
 
+# Install Nix
+./nix.sh
+
 # Install/update the dotfiles
 ./install.sh
 

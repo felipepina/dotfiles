@@ -16,7 +16,7 @@ test -f "$(command -v fdfind)" && alias fd=fdfind
 alias sudo='sudo '
 
 # Update apt, snap and flatpak
-alias update='sudo apt update && sudo apt upgrade; sudo snap refresh; flatpak update'
+alias update='sudo apt update && sudo apt upgrade; sudo snap refresh; flatpak update; nix-channel --update nixpkgs && nix-env --upgrade && nix-store --gc'
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'

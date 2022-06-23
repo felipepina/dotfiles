@@ -30,6 +30,11 @@ fi;
 ## Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 #[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
+# Load Nix profile
+if [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ]; then
+    source ${HOME}/.nix-profile/etc/profile.d/nix.sh;
+fi;
+
 # Load Bash It (https://github.com/Bash-it/bash-it)
 source "$BASH_IT"/bash_it.sh
 
