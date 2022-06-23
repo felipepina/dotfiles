@@ -26,7 +26,12 @@
     ~/.local/bin/cb:
       create: true
       path: bin/cb
-
+    ~/.local/bin/dropbox-ignore:
+      create: true
+      path: bin/dropbox-ignore
+    ~/.config/kitty/kitty.conf:
+      create: true
+      path: kitty.conf
 - create:
   - ~/Projects
 
