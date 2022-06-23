@@ -28,7 +28,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash-it enable completion bash-it docker-compose gradle helm kubectl maven minikube npm nvm sdkman ssh system tmux
 
 # Add bash-it plugins
-bash-it enable plugin alias-completion base docker docker-compose edit-mode-emacs extract fzf git gradle history java less-pretty-cat man node nvm sdkman ssh
+bash-it enable plugin alias-completion base docker docker-compose edit-mode-emacs extract fzf git gradle history java less-pretty-cat man node sdkman ssh
 
 # Add bash-it aliases
 bash-it enable alias ag apt curl docker-compose docker emacs general git kubectl maven npm systemd tmux
