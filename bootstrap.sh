@@ -21,6 +21,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Install SDKMAN!
 ./sdkman.sh
 
+# Install z
+./z.sh
+
 # Add bash-it completions
 bash-it enable completion bash-it docker-compose gradle helm kubectl maven minikube npm nvm sdkman ssh system tmux
 

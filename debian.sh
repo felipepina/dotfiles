@@ -76,13 +76,6 @@ sudo apt install -y vbindiff
 # Command line interface to the X11 clipboard (https://github.com/astrand/xclip)
 sudo apt install -y xclip
 
-# z - jump around (https://github.com/rupa/z)
-curl "https://raw.githubusercontent.com/rupa/z/master/{z.sh}" \
-	-o "${HOME}/dotfiles/bin/""#1"
-# The missing fuzzy tab completion feature of z jump around command (https://github.com/changyuheng/fz)
-curl "https://raw.githubusercontent.com/changyuheng/fz/master/{fz.sh}" \
-	-o "${HOME}/dotfiles/bin/z""#1"
-
 #  Lua Version Manager (https://dhavalkapil.com/luaver)
 curl https://raw.githubusercontent.com/dhavalkapil/luaver/v1.0.0/install.sh \
 	-o "${HOME}/dotfiles/install_luaver.sh" &&

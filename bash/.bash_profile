@@ -50,11 +50,11 @@ test -r "${HOME}/dotfiles/bin/zfz.sh" && source "${HOME}/dotfiles/bin/zfz.sh"
 # Setup fzf (https://github.com/junegunn/fzf)
 if which fzf > /dev/null; then
 	# Key bindings
-	source /usr/share/doc/fzf/examples/key-bindings.bash
+	source ${HOME}/.nix-profile/share/fzf/key-bindings.bash
 
 	# Bash fuzzy completion
 	[[ $- == *i* ]] && source /usr/share/bash-completion/completions/fzf 2> /dev/null
-	[[ $- == *i* ]] && source /usr/share/doc/fzf/examples/completion.bash 2> /dev/null
+	[[ $- == *i* ]] && source ${HOME}/.nix-profile/share/fzf/completion.bash 2> /dev/null
 
 	# Setup fuzzy completion for more commands
 	complete -F _fzf_path_completion -o default -o bashdefault ag
@@ -69,9 +69,9 @@ if which fzf > /dev/null; then
 	# export FZF_CTRL_T_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 	# Change default command to fd (fdfind in Debian)
-	export FZF_DEFAULT_COMMAND='fdfind --type f -H -I'
-	export FZF_CTRL_T_COMMAND='fdfind --type f -H -I'
-	export FZF_ALT_C_COMMAND='fdfind --type d -H -I'
+	export FZF_DEFAULT_COMMAND='fd --type f -H -I'
+	export FZF_CTRL_T_COMMAND='fd --type f -H -I'
+	export FZF_ALT_C_COMMAND='fd --type d -H -I'
 
 	# Enable preview for the CTRL-T using pygments as syntax highlighter
 	export FZF_CTRL_T_OPTS="--preview '(pygmentize -f 256 -O style="$BASH_IT_CCAT_STYLE" -g {} || tree -C {}) 2> /dev/null | head -200'"
