@@ -31,8 +31,8 @@ fi;
 #[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 # Load Nix profile
-if [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ]; then
-    source ${HOME}/.nix-profile/etc/profile.d/nix.sh;
+if [ -e "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
+    source "${HOME}/.nix-profile/etc/profile.d/nix.sh";
 fi;
 
 # Load Bash It (https://github.com/Bash-it/bash-it)
@@ -50,7 +50,7 @@ test -r "${HOME}/dotfiles/bin/zfz.sh" && source "${HOME}/dotfiles/bin/zfz.sh"
 # Setup fzf (https://github.com/junegunn/fzf)
 if which fzf > /dev/null; then
 	# Key bindings
-	source ${HOME}/.nix-profile/share/fzf/key-bindings.bash
+	source "${HOME}/.nix-profile/share/fzf/key-bindings.bash"
 
 	# Bash fuzzy completion
 	[[ $- == *i* ]] && source /usr/share/bash-completion/completions/fzf 2> /dev/null
@@ -85,10 +85,10 @@ if which fzf > /dev/null; then
 fi;
 
 # Nord dircolors (https://github.com/arcticicestudio/nord-dircolors)
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+test -r "${HOME}/.dir_colors" && eval $(dircolors "${HOME}/.dir_colors")
 
 # luaver (https://github.com/DhavalKapil/luaver)
-[ -s ${HOME}/.luaver/luaver ] && . ${HOME}/.luaver/luaver
+[ -s "${HOME}/.luaver/luaver" ] && . "${HOME}/.luaver/luaver"
 
 # # Node Version Manager - nvm (https://github.com/nvm-sh/nvm)
 # export NVM_DIR="$HOME/.nvm"
