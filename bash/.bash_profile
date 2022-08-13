@@ -53,7 +53,7 @@ if which fzf > /dev/null; then
 	source "${HOME}/.nix-profile/share/fzf/key-bindings.bash"
 
 	# Bash fuzzy completion
-	[[ $- == *i* ]] && source /usr/share/bash-completion/completions/fzf 2> /dev/null
+	#[[ $- == *i* ]] && source /usr/share/bash-completion/completions/fzf 2> /dev/null
 	[[ $- == *i* ]] && source ${HOME}/.nix-profile/share/fzf/completion.bash 2> /dev/null
 
 	# Setup fuzzy completion for more commands
@@ -62,6 +62,7 @@ if which fzf > /dev/null; then
 	complete -F _fzf_path_completion -o default -o bashdefault rg
 	complete -F _fzf_path_completion -o default -o bashdefault ccat
 	complete -F _fzf_path_completion -o default -o bashdefault cless
+	complete -F _fzf_path_completion -o default -o bashdefault bat
 	complete -F _fzf_dir_completion -o default -o bashdefault tree
 
 	# Change default command to ripgrep
