@@ -9,3 +9,4 @@ cargo_bin="$HOME/.cargo/bin"
 if [ -n "${PATH##*$cargo_bin*}" ] ;then
    export PATH="$cargo_bin:$PATH";
 fi
+
