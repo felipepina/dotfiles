@@ -91,6 +91,11 @@ test -r "${HOME}/.dir_colors" && eval $(dircolors "${HOME}/.dir_colors")
 # luaver (https://github.com/DhavalKapil/luaver)
 [ -s "${HOME}/.luaver/luaver" ] && . "${HOME}/.luaver/luaver"
 
+# Quakus completion
+if which quarkus > /dev/null; then
+    source <(quarkus completion)
+fi;
+
 # # Node Version Manager - nvm (https://github.com/nvm-sh/nvm)
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
