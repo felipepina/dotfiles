@@ -6,6 +6,9 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.config/home-manager/home.nix:
+      create: true
+      path: home.nix
     ~/.alacritty.yml:
     ~/.bash:
     ~/.bash_profile: bash/.bash_profile

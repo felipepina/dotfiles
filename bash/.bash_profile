@@ -35,6 +35,11 @@ if [ -e "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
     source "${HOME}/.nix-profile/etc/profile.d/nix.sh";
 fi;
 
+# Load Home
+if [ -e "${HOME}/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+	source "${HOME}/.nix-profile/etc/profile.d/hm-session-vars.sh";
+fi;
+
 # Load Bash It (https://github.com/Bash-it/bash-it)
 source "$BASH_IT"/bash_it.sh
 
