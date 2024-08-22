@@ -9,6 +9,8 @@ alias g="git"
 alias glall="git log --all --decorate --oneline --graph"
 alias ec="emacsclient -c"
 
+alias restart-gnome-shell="killall -3 gnome-shell"
+
 # Alias Debian fd exec name fdfind to fd
 test -f "$(command -v fdfind)" && alias fd=fdfind
 
