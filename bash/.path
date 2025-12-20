@@ -10,3 +10,8 @@ if [ -n "${PATH##*$cargo_bin*}" ] ;then
    export PATH="$cargo_bin:$PATH";
 fi
 
+# Add asdf's data directory to path
+asdf_data_dir="${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
+if [ -n  "${PATH##*$asdf_data_dir*}" ] ;then
+    export PATH="$asdf_data_dir:$PATH";
+fi

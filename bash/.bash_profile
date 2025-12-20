@@ -35,7 +35,7 @@ if [ -e "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
     source "${HOME}/.nix-profile/etc/profile.d/nix.sh";
 fi;
 
-# Load Home
+# Load Home Manager (Nix)
 if [ -e "${HOME}/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
 	source "${HOME}/.nix-profile/etc/profile.d/hm-session-vars.sh";
 fi;
@@ -105,6 +105,11 @@ fi;
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# asdf completion
+# if which asdf > /dev/null; then
+#     source <(asdf completion bash)
+# fi;
 
 if which starship > /dev/null; then
 	eval "$(starship init bash)"
