@@ -37,6 +37,7 @@
 
     pkgs.aria2
     pkgs.asciinema
+    pkgs.asdf-vm
     pkgs.aspell
     pkgs.aspellDicts.en
     pkgs.aspellDicts.fr
@@ -77,6 +78,7 @@
     pkgs.silver-searcher
     pkgs.stow
     pkgs.subversionClient
+    pkgs.television
     pkgs.tmux
     pkgs.tree
     pkgs.viddy
