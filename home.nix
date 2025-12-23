@@ -50,7 +50,7 @@
     pkgs.curl
     pkgs.curlie
     pkgs.difftastic
-    pkgs.emacs
+    # pkgs.emacs
     pkgs.eza
     pkgs.fd
     pkgs.ffmpeg
@@ -146,4 +146,6 @@
       # ~/.config/starship.toml
     };
   };
+
+  programs.emacs.enable = true;
 }
