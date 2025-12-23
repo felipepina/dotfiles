@@ -46,6 +46,7 @@
     pkgs.bash
     pkgs.bat
     pkgs.cacert
+    pkgs.cmus
     pkgs.curl
     pkgs.curlie
     pkgs.difftastic
@@ -84,6 +85,7 @@
     pkgs.viddy
     pkgs.xclip
     pkgs.yazi
+    pkgs.zed-editor
     pkgs.zellij
   ];
 
