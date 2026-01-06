@@ -45,6 +45,7 @@
     pkgs.attr
     pkgs.bash
     pkgs.bat
+    pkgs.btop-cuda
     pkgs.cacert
     pkgs.cmus
     pkgs.curl
@@ -63,6 +64,8 @@
     pkgs.hurl
     pkgs.imagemagick
     pkgs.jq
+    # pkgs.kitty
+    pkgs.kubectl
     pkgs.multimarkdown
     pkgs.neofetch
     pkgs.nnn
@@ -85,7 +88,7 @@
     pkgs.viddy
     pkgs.xclip
     pkgs.yazi
-    pkgs.zed-editor
+    # pkgs.zed-editor
     pkgs.zellij
   ];
 
