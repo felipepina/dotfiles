@@ -4,7 +4,7 @@
 sudo apt install flatpak
 
 # Add Flathub repository
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Install apps
 flatpak install flathub com.basemark.BasemarkGPU
