@@ -6,7 +6,8 @@ sudo apt install snapd
 # Install snaps
 sudo snap install chromium
 sudo snap install code --classic
-sudo snap install intellij-idea-community --classic
+# sudo snap install intellij-idea-community --classic
+sudo snap install intellij-idea-ultimate --classic
 sudo snap install kubectl --classic
 sudo snap install ncspot           # Cross-platform ncurses Spotify client written in Rust (https://github.com/hrkfdn/ncspot)
 sudo snap install plexmediaserver  # Plex magically organizes your media libraries and streams them to any device (https://www.plex.tv)
