@@ -90,3 +90,4 @@ curl https://raw.githubusercontent.com/dhavalkapil/luaver/v1.0.0/install.sh \
 
 # Install Pygments (https://pygments.org/)
 pip3 install Pygments
+

@@ -32,3 +32,4 @@ bash-it enable plugin alias-completion base docker docker-compose edit-mode-emac
 
 # Add bash-it aliases
 bash-it enable alias ag apt curl docker-compose docker emacs general git kubectl maven npm systemd tmux
+
